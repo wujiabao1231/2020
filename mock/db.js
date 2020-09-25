@@ -39,7 +39,9 @@ let mapData2 = (n) => {
       detail:{
         auth_icon:Mock.Random.image('50x50',Mock.Random.color(),Mock.Random.cword(1)),
         auth:'@cname()',
-        content:'@cparagraph(3)'
+        content: [1,2,3].map(()=>(
+          "<p style='margin-top: 20px;text-indent: 2em'>"+"@cparagraph(10,15)"+"</p>"
+        )).join('')
       }
     })
   }
